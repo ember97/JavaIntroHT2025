@@ -192,7 +192,6 @@ public class Week1 {
 
     }
 
-    // TODO: We are here!! :)
     /*
     10 Skapa ett program som använder en statisk metod för att beräkna medelvärdet av tre tal.
     Skapa en statisk metod med namnet calculateAverage som tar tre double parametrar (num1, num2, num3).
