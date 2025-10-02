@@ -1,0 +1,155 @@
+1 Grundläggande Syntax, Datatyper & Felsökning
+För inläsning från tangentbordet prova att använda System.console().readln();
+
+1 Vad skrivs ut av följande kod?
+
+int x;
+x = 15;
+System.out.println(x);
+
+int x = 10;
+int y = x - 1;
+System.out.println(y);
+
+int x, y;
+x = (int)120.954;
+y = x * 2;
+System.out.println(x + y);
+
+String s = "amm";
+s = "fäkt";
+System.out.println("An" + s + "a");
+
+String a = "an", b = "be", d= "do";
+System.out.println(a + b + a + d + b);
+
+int x = 2, y = 4, z = 8;
+System.out.println( (x * y + z) / y - z + y / (x * z / x) );
+
+
+
+
+2 Deklarera tre variabler med olika datatyper:
+En heltalstyp (med namnet age) och tilldela den din ålder.
+En decimaltyp (med namnet weight) och tilldela den din vikt.
+En texttyp (med namnet initial) och tilldela den din initial.
+Skriv ut värdena av varje variabel på en egen rad till konsolen.
+
+
+
+
+3 Skriv ett program som frågar efter användarens namn och skriver ut en hälsning på konsolen.
+Tex om namnet är "Kalle" ska det skriva ut "Hej Kalle!"
+
+
+
+
+4 Skapa ett program som beräknar ytan av en rektangel.
+Deklarera två variabler av typen double, en för width (bredd) och en för height (höjd).
+Tilldela dem valfria värden.
+Skapa en tredje variabel, area, och tilldela den resultatet av att multiplicera width med height.
+Skriv ut värdet av area till konsolen.
+
+
+5 Skapa ett program som avgör om en person är gammal nog att köra bil.
+Deklarera en int variabel age och tilldela den ett värde (t.ex. 17).
+Använd en if-sats för att kontrollera om age är större än eller lika med 18.
+Om villkoret är sant, skriv ut: "Du är gammal nog att ta körkort!".
+Om villkoret är falskt, skriv ut: "Du behöver vänta i X år till."
+ (där X är antalet år som personen måste vänta).
+(Om programmet inte skriver ut det du förväntar dig,
+placera en brytpunkt på if-satsen för att se hur programmet utvärderar villkoret.)
+
+
+6 Skriv ett program som frågar användaren efter två tal och
+ skriver ut deras medelvärde samt det största av de två talen..
+ Exempel: om talen är 3 och 5 ska programmet skriva ut 4 och 5.
+
+
+
+7 Skriv ett program som räknar ut hur mycket moms det blir
+ om vi handlar för en viss summa. Momsen kan vara 6%, 12%
+ eller 25% beroende på vad det är för varor.
+ Programmet  ska fråga efter hur mycket pengar användaren har handlat för
+ och vilken moms det är. Programmet ska sen skriva ut informationen.
+ Tänk på att vi vill supporta inläsning och utskrifter enligt svensk standard med komma (,)
+  som decimalavgränsare. Kan behöva använda NumberFormat.
+
+Ex:
+Brutto summa: 87,50 kr
+Moms 25%    : 21,88 kr
+Totalt	          :    109 kr
+
+http://tutorials.jenkov.com/java-internationalization/decimalformat.html
+
+
+
+
+8  Skapa ett program som avgör om en student har klarat en kurs.
+Deklarera två double variabler: grade (betyg på prov) och attendance (närvaro i procent). Tilldela dem valfria värden.
+Använd en if-sats med en logisk operator (&&) för att kontrollera om grade
+är högre än eller lika med 70.0 OCH attendance är högre än eller lika med 80.0.
+Om båda villkoren är sanna, skriv ut: "Grattis! Du har klarat kursen."
+Använd en else-sats. I denna sats, skriv ut: "Tyvärr, du måste göra om kursen."
+
+
+
+9 Skapa ett program som bedömer ett betyg.
+Deklarera en char variabel grade och tilldela den ett värde (t.ex. 'B').
+Använd en switch-sats för att kontrollera grade.
+För fallet 'A', skriv ut: "Utmärkt!".
+För fallet 'B', skriv ut: "Bra jobbat!".
+För fallen 'C' och 'D', skriv ut: "Godkänt.".
+Använd default-satsen för alla andra fall och skriv ut: "Underkänt."
+
+
+
+10 Skapa ett program som använder en statisk metod för att beräkna medelvärdet av tre tal.
+Skapa en statisk metod med namnet calculateAverage som tar tre double parametrar (num1, num2, num3).
+Inuti metoden, beräkna medelvärdet: (num1 + num2 + num3) / 3.0. Returnera resultatet.
+I din main-metod, deklarera tre double variabler, tilldela dem valfria värden.
+Kalla på calculateAverage metoden med dessa tre variabler och lagra resultatet i en ny variabel averageResult.
+Använd en if/else if/else-struktur för att bedöma medelvärdet:
+Om medelvärdet är högre än 90.0, skriv ut: "Mycket bra jobbat!".
+Om det är mellan 70.0 och 90.0 (inklusive), skriv ut: "Bra jobbat.".
+Annars, skriv ut: "Öva lite mer."
+
+
+
+11 Vad händer när följande kod körs?
+int a = 1;
+if( a > 1 )
+   System.out.println("a > 1 (första)");
+a--;
+if( a > 1 ) {
+   System.out.println("a > 1 (andra)");
+}
+else {
+   System.out.println("a <= 1");
+}
+ Vad händer om vi istället initialiserar a med 2 eller 3?
+
+
+
+
+12 Vad händer när följande kod körs?
+final char c = 'q';
+switch( c ) {
+   case 'a':
+       System.out.println("variable is 'a'");
+       break;
+   case 'b':
+       System.out.println("variable is 'b'");
+       break;
+   default:
+       System.out.println("variable is another letter");
+       break;
+}
+
+
+Bonus: Fizzbuzz
+
+Skriv en metod som tar in en integer.
+Om talet är jämnt delbart med 3, skriv ut "Fizz"
+Om talet är jämnt delbart med 5, skriv ut "Buzz"
+Om talet är både jämnt delbart med 3 och 5, skriv ut "Fizz Buzz"

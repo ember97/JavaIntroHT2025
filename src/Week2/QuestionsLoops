@@ -1,0 +1,107 @@
+2 Loopar, Arrayer & Strängar
+
+Flera av uppgifterna kan lösas med funktionell programmering och java streams
+ vilket vi kommer till senare i kursen.
+  Försök att lösa uppgifterna med vanliga loopar och villkor först.
+
+1 Skriv ett program som skriver ut talen 1 till 16 med hjälp av en loop.
+
+2 Skriv ett program som har talet 65536 i en variabel.
+Så länge som variabeln är större än 2 ska programmet loopa,
+ skriva ut talet och sedan dela variabeln med 2.
+
+Tips: Division med 2 i en dator är samma sak som att skifta alla bitar ett steg höger.
+int i = 16;
+int halfI = i >> 1;
+
+3 Skriv ett program som skriver ut de jämna talen 20 till 2 i den ordningen,
+med hjälp av en loop. Tips: Modulo operatorn %
+
+4 Skriv ett program som loopar och frågar användaren efter en sträng.
+Så länge som strängen inte är en tom sträng så ska programmet
+ lägga ihop den med tidigare strängar, med ett mellanrum.
+ Om användaren t.ex. har skrivit "ord1" tidigare och skriver "ord2" ska den nya strängen
+  bli "ord1 ord2". Fortsätt loopa tills användaren skickar en tom sträng eller en punkt.
+
+5 Skriv ett program som frågar användaren efter ett tal.
+ Programmet ska loopa så länge som talet är större än 2.
+ Varje loop ska programmet välja: om talet är udda, multiplicera talet med 3 och lägg till 1.
+ Om talet är jämnt, dela det med 2.
+ Skriv ut det nya talet varje varv i loopen.
+
+
+6 Skriv ett program som frågar användaren efter ett tal mellan 1 och 100.
+ Programmet ska ha ett hemligt tal lagrat i en variabel.
+ Det ska fortsätta fråga användaren till dess att användaren gissar det hemliga talet.
+ Om man gissade för högt eller för lågt så ska det skrivas ut,
+ så att användaren har en rimlig chans att klara det.
+
+Exempel: programmet har det hemliga talet 27. Användaren gissar på 50.
+Programmet skriver ut att användaren gissade för högt.
+Användaren gissar på 20. Programmet skriver ut att det var för lågt.
+Användaren gissar på 27. Programmet skriver ut att det var rätt och avslutas.
+
+Extra utmaning: slumpa det hemliga talet med hjälp av Math.random();
+Spara antalet gissningar i en variabel och skriv ut det när användaren gissat rätt.
+
+
+
+
+7 Vad skriver följande program ut:
+for(int y=0; y<5; y++) {
+   for(int x=0; x<5; x++) {
+       if( x == y )
+           System.out.println("#");
+       else
+           System.out.println(".");
+   }
+   System.out.println("");
+}
+
+
+
+8 Skapa ett program som lagrar och skriver ut fem tal.
+Deklarera en array av typen int med namnet numbers och storleken 5.
+Använd en for-loop för att tilldela varje element i arrayen ett värde (t.ex. 10, 20, 30, 40, 50).
+Använd en annan for-loop för att iterera igenom arrayen och skriva ut varje element på en ny rad.
+
+
+9 Skapa ett program som skriver ut varje tecken i en textsträng.
+Deklarera en String variabel med namnet message och tilldela den en mening (t.ex. "Hej Java!").
+Använd en while-loop som fortsätter så länge som loopens räknare är mindre
+ än längden på strängen (message.length()).
+Inuti loopen, använd message.charAt(index) för att hämta ut tecknet
+ på det aktuella indexet och skriv ut det.
+Glöm inte att öka på din räknare i slutet av loopen.
+
+
+10 Skapa ett program som beräknar summan av alla element i en array.
+     Deklarera en array int[] numbers = {5, 12, 8, 21, 3};
+     Räkna nu ut summan av talen i arrayen med hjälp av en loop.
+     Hur kan vi hitta det största och minsta värdet i arrayen?
+
+
+11 Skapa en Record för att representera en bok som har String title och int pages.
+     Skapa flera böcker med olika titlar och antal sidor och placera dessa i en array.
+     Skriv en algoritm som kan hitta boken med flest sidor i arrayen.
+     Skriv ut alla böcker snyggt formaterat med titel och antal sidor.
+
+
+12 Skapa ett program som kollar om en given sträng är ett palindrom
+ (läses likadant framlänges som baklänges). Tex: abba, anna, radar.
+
+
+13 Låt programmet från uppgift 12 ignorera mellanslag vilket gör att
+ följande text blir ett palindrom: “Ni talar bra latin”
+
+
+14 En annan rolig sak med ord är anagram.
+Om man kastar om bokstäverna i ett ord så kan man få ett annat ord.
+Skriv ett program som kollar om två ord är anagram.
+
+
+"abcde".Substring(2) → "cde"
+"abcde".Substring(2, 1) → "c"
+
+
+

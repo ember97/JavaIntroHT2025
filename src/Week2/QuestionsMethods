@@ -1,0 +1,30 @@
+3 Metoder
+1 Skriv en metod som du kallar year som returnerar året
+  som ett heltal från en sträng i datumformat.
+  Funktionen ska ta en parameter, som ska vara en sträng.
+  Strängen ska alltid ha 10 tecken och följa mönstret 'YYYY-MM-DD'.
+  Man ska kunna skriva year(“2021-11-02”) och få talet 2021 som resultat.
+
+2 Skriv en funktion med namnet daysBetween som räknar ut hur många dagar det är mellan två datum.
+  Exempel: daysBetween(“2017-08-30”, “2017-09-02”) == 4 Tips: Använd javas färdiga klasser för att hantera datum.
+
+3 Skriv en funktion som översätter en temperatur i Fahrenheit till Celsius.
+  Den ska ta en parameter och returnera ett värde. Välj lämpliga datatyper.
+  Formel:
+            degreesCelsius(T) = ((T-32) * 5)/9
+
+4 Skriv en funktion som inte tar några argument och som returnerar summan av de 100 första heltalen.
+  Använd en loop. Förbättra sedan funktionen så att den tar en parameter, som är hur många tal som ska läggas ihop.
+
+5 Skriv en funktion som tar en sträng som parameter och returnerar strängen baklänges.
+
+6 Skriv en funktion som tar ett tal som parameter och returnerar true om det är ett primtal.
+  Ett primtal är ett heltal som bara är delbart med sig självt och 1. De första primtalen är 2, 3, 5, 7.
+  Men 8 är inget primtal eftersom 8 / 2 == 4.
+
+Obs! Det går att hitta färdiga lösningar på internet. Men om du plockar en färdig lösning så lär du dig mindre än om du försöker göra en själv först. Check for Prime Number - GeeksforGeeks
+
+7 Skriv en funktion som beräknar medelvärdet av parametrarna som skickas in.
+  Gör flera versioner (överlagring, overloading) av metoden som tar olika antal parametrar
+  men har samma funktionsnamn.
+  Vi vill kunna hantera 2,3,4,5…

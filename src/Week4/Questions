@@ -1,0 +1,57 @@
+Arv och gränssnitt
+1 Skriv en klass som ärver från en annan klass.
+Superklassen ska vara något generellt och subklassen något mer specifikt.
+Skapa objekt av båda klasserna för att kontrollera att du har gjort rätt.
+Exempel ( Djur, Fordon, Personer, Mat)
+
+2 Skapa två publika metoder i superklassen från förra uppgiften.
+Metoderna ska skriva ut något så att man ser att de körs.
+Lägg till en av metoderna i subklassen.
+Skapa ett objekt av subklassen och testa vad som händer
+när du anropar båda funktionerna från en referens av
+typ.
+SuperClass referens = new SubClass();
+
+3 Ändra metoden i subklassen så att den även anropar metoden i
+ superklassen med hjälp av super.
+
+4 Skriv minst fyra klasser som motsvarar olika djur.
+Alla djur ska ha Animal som första superklass.
+Andra superklasser som kan vara bra att ha med är Bird, Mammal, Fish osv.
+Se till att de ärver från Animal och att klasserna för
+respektive djur ärver från rätt klass.
+
+5 Skapa en klasshierarki för olika sorters fordon.
+Du ska alltså skapa klasser som ärver från varandra.
+Du ska ha klasserna Vehicle, Bicycle, Boat, Car, Motorboat och Sailboat.
+Vehicle ska ha en metod som heter goTo, som tar en parameter.
+Funktionen ska skriva ut "Färdas till [parametern]".
+Skapa ett objekt av varje klass och anropa goTo med ditt favoritresmål.
+
+6 Gör så att klasserna som ärver från Vehicle skriver över goTo från
+Vehicle med egna metoder.
+De ska skriva ut liknande saker som Vehicle.goTo(),
+men det ska framgå vilket fordon man åker med.
+Till exempel "Färdas med bil till [resmål]".
+
+7 Använd konstruktormetoder i Vehicle och alla subklasser.
+Observera att en subklass ska anropa superklassens konstruktor med
+hjälp av super innan den gör något annat.
+För att demonstrera det hela på ett bra sätt lägg tex ett
+ private final String manufacturer;
+ fält i Vehicle klassen som initieras via konstruktorn.
+
+8 Skapa en abstrakt klass med minst en abstrakt metod.
+Skapa en klass som ärver från den och implementerar den abstrakta metoden.
+
+9 Gör Vehicle och Animal abstrakta.
+Kontrollera att det inte går att skapa objekt av klasserna Vehicle och Animal.
+
+10 Skapa ett interface med namnet NoiseMaker.
+Det ska innehålla en metod med namnet makeNoise.
+Ändra minst två djurklasser så att de implementerar interfacet.
+Lägg till en klass Robot som implementerar NoiseMaker men inte ärver från Animal.
+
+11 Skapa objektinstancer av de olika NoiceMakers typerna och lagra dessa i en array
+ eller ArrayList<NoiseMaker>. Gå igenom alla
+
