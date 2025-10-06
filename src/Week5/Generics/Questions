@@ -1,0 +1,66 @@
+5 Generics
+
+1 Skriv en generisk klass med namnet Safe, som representerar ett kassaskåp.
+Klassen ska ha metoderna store och retrieve.
+Store ska kunna lägga till ett objekt i kassaskåpet.
+Retrieve ska ta bort och returnera ett objekt som tidigare lagras i kassaskåpet.
+
+2 Skapa ett program som lägger till 10 slumptal av datatypen double i en lista.
+Loopa igenom listan med foreach och skriv ut värdet på slumptalen.
+
+3 Skapa ett “Dictionary-objekt”, (Map + HashMap i modern Java) som har en string som key och Animal-objekt som value.
+Använd klasserna från övning 6.4. Skapa fem olika Animal-objekt och lägg till dem till din Map med ett lämpligt nyckelvärde.
+Testa att det går att plocka fram objekten igen.
+
+4 Skapa en generisk klass med namnet Trio.
+Den ska ha tre publika värden som man kan sätta till samma datatyp när man skapar objekt av klassen.
+
+5 Ändra klassen Trio så att det kan vara tre olika datatyper, som är subklasser till olika fordonsklasser.
+
+6 Gör en egen stack! Skriv en klass som har metoderna Push och Pop. Push ska lägga till ett objekt överst i stacken.
+Pop ska ta bort och returnera det objekt som ligger överst i stacken.
+Prova datastrukturen genom att lägga till minst tre godtyckliga objekt och ta ut dem ett och ett.
+Lagringen av objekt kan implementeras internt antingen med en array eller
+ArrayList eller så gör man en länkad lista enligt följande:
+
+https://www.javaguides.net/2018/09/stack-implementation-using-linked-list-in-java.html
+
+Börja med att skapa en (generisk) klass med namnet Node som representerar ett element i stacken.
+Klassen ska innehålla ett fält för själva värdet och ett fält med namnet next, som ska peka på nästa Node-objekt,
+eller null om det är sista elementet.
+
+
+7 Stacken i förra uppgiften är exempel på en länkad lista.
+En sådan lista består av noder, där varje element förutom att ha sitt värde har en länk till nästa element i listan.
+Den kallas enkellänkad eftersom länkarna bara går åt ett håll.
+Uppdatera listan till en dubbellänkad lista genom att lägga till länkar som går bakåt.
+Testa att den fungerar genom att lägga till fem element i listan.
+Loopa sedan igenom den framlänges och baklänges och skriv ut värdet på varje element.
+
+Hjälp:
+        /*
+        SimplyLinkedList list = new SimplyLinkedList();
+        list.insert('A');
+        list.insert('B');
+        list.insert('C');
+        list.insert('D');
+        list.printFromFront();
+        */
+
+
+        /*
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        DoubleNode nodeA = new DoubleNode('A');
+        DoubleNode nodeB = new DoubleNode('B');
+        DoubleNode nodeC = new DoubleNode('C');
+        DoubleNode nodeD = new DoubleNode('D');
+
+
+        doublyLinkedList.insert(nodeA);
+        doublyLinkedList.insert(nodeB);
+        doublyLinkedList.insert(nodeC);
+        doublyLinkedList.insert(nodeD);
+
+        doublyLinkedList.printFromFront();
+        doublyLinkedList.printFromBack(nodeD);
+         */
