@@ -3,6 +3,7 @@ package Week5.Collections;
 import java.util.*;
 
 public class Collections {
+    // Det vi skrev i main på lektionen
     public static void collections(){
         /*
         Skapa en List<String> med ord.
@@ -128,6 +129,8 @@ public class Collections {
         //listWithNames();
         //phoneBookWithMap();
     }
+
+    // Det vi gjorde som egna metoder i Main-filen på lektionen
 
     public static void listWithNames(){
         /*
