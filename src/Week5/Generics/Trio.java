@@ -1,6 +1,6 @@
 package Week5.Generics;
 
-import Week4.Vehicle;
+import Week4.Vehicle.Vehicle;
 
 public class Trio<T extends Vehicle, S extends Vehicle, R extends Vehicle> {
     public T x;

@@ -1,12 +1,7 @@
 package Week5;
 
-import Week4.Animal;
-import Week4.Bicycle;
-import Week4.Boat;
-import Week4.Sailboat;
-import Week5.Generics.Safe;
+import Boat;
 import Week5.Generics.Stack;
-import Week5.Generics.Trio;
 
 import java.util.*;
 
