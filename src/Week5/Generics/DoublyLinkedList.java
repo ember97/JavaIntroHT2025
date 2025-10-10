@@ -16,8 +16,7 @@ public class DoublyLinkedList<T> {
             }
 
             node.previous = lastNode; // lastNode is before the element we want to insert
-            DoubleNode nextNode = node;
-            lastNode.next = nextNode; // nextNode is after lastNode
+            lastNode.next = node; // nextNode is after lastNode
         }
     }
 
