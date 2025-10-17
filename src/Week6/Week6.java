@@ -3,17 +3,15 @@ package Week6;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.TreeMap;
+
 
 public class Week6 {
     List<Country> countries = Country.getCountries();
 
     /*
     2 Skriv ut namnet på det första och det sista landet i listan på konsolen.
-
-    städerna.stream().skip(städerna.size() - 1).findFirst().ifPresent(stad -> System.out.println(stad));
      */
     public void Q2(){
         String nameOfFirst = countries.stream()
@@ -33,13 +31,6 @@ public class Week6 {
                 .map(Country::countryName)
                 .orElse("");
         System.out.println(s2);
-
-        countries.stream()
-                .reduce((first, second) -> second)
-                .ifPresent(last -> System.out.println("Sista landet: " + last ));
-
-
-        // [a,b,c,d,e]
     }
 
     /*
@@ -65,12 +56,6 @@ public class Week6 {
         countries.stream()
                 .sorted(Comparator.comparingDouble(Country::population).reversed())
                 .forEach(country -> System.out.println(country.countryName()));
-
-         /*
-        countries.stream()
-        .sorted((a, b) -> Double.compare(b.getPopulation(), a.getPopulation()))
-        .forEach(country -> System.out.println(country.getName() + ": " + country.getPopulation()));
-         */
     }
     /*
     5 Skriv ut vilken den största befolkningsmängden är.
@@ -80,7 +65,7 @@ public class Week6 {
                 .max(Comparator.comparing(Country::population))
                 .ifPresent(c->System.out.println("Landet med störst befolning är " + c.getName() + " med " + c.getPopulation() + "miljoner invånare"));
 
-
+        // Alternativt:
         Country c = countries.stream()
                 .max(Comparator.comparing(Country::population))
                 .orElseThrow();
@@ -206,40 +191,26 @@ public class Week6 {
      */
 
     public void Q15(){
-
-    }
-
-    private void getListByPopulationSorted(int x){
-        List<Country> countrySorted = countries.stream()
-                .filter(c -> Math.round(c.population()) == x)
-                .sorted(Comparator.comparing(Country::countryName))
-                .collect(Collectors.toList());
-
-
-
-        /*
         System.out.println("Länder med mindre än 1mil medborgare");
-        städerna.stream()
-                .filter(stad -> Math.floor(stad.getPeople()) < 1)
-                .map(stad -> stad.getCountry())
+        countries.stream()
+                .filter(stad -> Math.floor(stad.getPopulation()) < 1)
+                .map(stad -> stad.getName())
                 .forEach(stad -> System.out.println(stad));
-         */
 
-/*
+        // Alternativ:
         Map<Integer, List<String>> grupperadeLander = countries.stream()
-        .collect(Collectors.groupingBy(
-                c -> (int) Math.floor(c.population()),                // Avrundar nedåt till heltal
-                TreeMap::new,                                        // Sorterar grupperna i stigande ordning
-                Collectors.mapping(Country::getName, Collectors.toList()) // Samlar namn i varje grupp
-        ));
+                .collect(Collectors.groupingBy(
+                        c -> (int) Math.floor(c.population()),                // Avrundar nedåt till heltal
+                        TreeMap::new,                                        // Sorterar grupperna i stigande ordning
+                        Collectors.mapping(Country::getName, Collectors.toList()) // Samlar namn i varje grupp
+                ));
 
         grupperadeLander.forEach((miljoner, namnLista) -> {
             System.out.println("Länder med " + miljoner + " miljoner invånare:");
             namnLista.stream()
                     .sorted()                                            // Sorterar namn alfabetiskt
                     .forEach(namn -> System.out.println("- " + namn));
-});*/
-
+        });
 
     }
 
@@ -277,18 +248,8 @@ public class Week6 {
                 .map(Country::countryName)
                 .forEach(System.out::println);
         /*
+        Såhär kan man också reverse Strings:
         Comparator.comparing(c -> new StringBuilder(c.capital).reverse())
-         */
-
-        /*
-        countries.stream()
-        .sorted((a, b) -> {
-            String reversedA = new StringBuilder(a.getCity()).reverse().toString();
-            String reversedB = new StringBuilder(b.getCity()).reverse().toString();
-
-            return reversedB.compareTo(reversedA);
-                })
-        .forEach(c -> System.out.println(c.getName() + " (" + c.getCity() + ")"));
          */
     }
 
@@ -306,7 +267,7 @@ public class Week6 {
 
         double befolkningStörsta3 = countries.stream()
                 .sorted(Comparator.comparing(Country::population).reversed())
-                .limit(6)
+                .limit(3)
                 .mapToDouble(countries -> countries.getPopulation())
                 .sum();
 
