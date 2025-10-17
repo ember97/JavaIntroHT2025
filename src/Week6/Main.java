@@ -6,6 +6,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        new Week6().Q2();
+        new Week6().Q19();
     }
 }

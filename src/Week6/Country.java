@@ -3,7 +3,19 @@ package Week6;
 import java.util.List;
 import java.util.Map;
 
-record Country(String countryName, String capital, double population, int area) {
+record Country(String countryName, String capital, double population, int area) implements Comparable<Country> {
+
+    public String getName(){
+        return this.countryName;
+    }
+
+    public double getPopulation(){
+        return this.population;
+    }
+
+
+
+
 
     public static List<Country> getCountries() {
         return List.of(
@@ -32,8 +44,13 @@ record Country(String countryName, String capital, double population, int area) 
         entrySet.getValue().forEach(country -> System.out.println(" - " + country.countryName));
     }
 
-    public static String getReverse(Country country) {
-        return new StringBuilder(country.capital).reverse().toString();
+    public String getReverse() {
+        return new StringBuilder(this.capital).reverse().toString();
+    }
+
+    @Override
+    public int compareTo(Country o) {
+        return this.countryName.compareTo(o.countryName);
     }
 }
 
