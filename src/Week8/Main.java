@@ -1,8 +1,7 @@
-package Week6;
+package Week8;
 
-import Week5.Generics.Stack;
+import Week6.Week6;
 
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
