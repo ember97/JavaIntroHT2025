@@ -124,7 +124,7 @@ public class Week8Prep {
         String word = "hands jumbled terrific old-fashioned grass highfalutin. stupendous daughter feigned. skirt modern truthful";
         Pattern pattern = Pattern.compile("\\.\\s([a-z])"); // Capture the letter. We have a group consisting of one letter for each match
         Matcher matcher = pattern.matcher(word);
-        String result = matcher.replaceAll(m -> ". " + m.group(1).toUpperCase());
+        String result = matcher.replaceAll(m -> ". " + m.group(1).toUpperCase()); // Each match has a group consisting of the letter
         System.out.println(result);
     }
 }
