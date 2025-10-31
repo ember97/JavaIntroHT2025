@@ -7,7 +7,8 @@ import java.util.regex.Pattern;
 
 
 public class Main {
+
     public static void main(String[] args) {
-        new Week8().Q1();
+        new Week8().Q14();
     }
 }

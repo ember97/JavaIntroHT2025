@@ -6,13 +6,20 @@ Frågor:
 
 8 Regular expressions
 
-1 Skriv ett regex-mönster som testar om ordet strängen "kat" förekommer i strängen "min katt har tre konkatenerade kanter". Skriv ut svaret på konsolen.
+1 Skriv ett regex-mönster som testar om ordet strängen "kat" förekommer i strängen "min katt har tre konkatenerade kanter"
+Skriv ut svaret på konsolen.
 
-2 Skriv ett pattern som tar reda på hur många gånger orden "kat", "kan" och "kon" förekommer i samma sträng som uppgift 1. Loopa sedan igenom matchningarna och skriv ut varje sökträff på konsolen.
+2 Skriv ett pattern som tar reda på hur många gånger orden "kat", "kan" och "kon" förekommer i samma sträng som uppgift 1
+Loopa sedan igenom matchningarna och skriv ut varje sökträff på konsolen.
 
-3 Skriv ett pattern som tar reda på hur många gånger bokstaven "a" med valfri bokstav efter förekommer i strängen. Skriv ut varje sökträff på konsolen.
+3 Skriv ett pattern som tar reda på hur många gånger bokstaven "a" med valfri bokstav efter förekommer i strängen
+Skriv ut varje sökträff på konsolen.
 
-4 Skriv ett pattern som tar reda på hur många gånger bokstaven "t" förekommer i strängen, omgiven av tecken som inte är t.
+4 Skriv ett pattern som tar reda på hur många gånger bokstaven "t" förekommer i strängen,
+omgiven av tecken som inte är t.
+
+
+
 
 I de kommande uppgifterna ska du använda den här strängen: "hands jumbled terrific old-fashioned grass highfalutin stupendous daughter feigned skirt modern truthful"
 
@@ -20,12 +27,16 @@ I de kommande uppgifterna ska du använda den här strängen: "hands jumbled ter
 
 6 Skriv ett pattern som tar reda på hur många gånger bokstäverna "a" eller "e" följs av "n", "d" eller "s" i strängen.
 
-7 Skriv ett pattern som tar reda på hur många ord i strängen som börjar med "d" eller "h". Sedan ett nytt pattern för hur många ord som slutar med "s".
+7 Skriv ett pattern som tar reda på hur många ord i strängen som börjar med "d" eller "h"
+Sedan ett nytt pattern för hur många ord som slutar med "s".
 
 8 Ta reda på hur många ord i strängen som har en vokal som andra bokstav.
 
-9 och 10 är extrauppgifter som måste lösas med back references. Titta gärna på dem om du har tid över.
-9 Ta reda på hur många gånger en bokstav förekommer dubbelt i strängen. Exempel: "ss", "oo", "pp". Gör detta i ett regex utan att skriva några bokstäver.
+9 och 10 är extrauppgifter som måste lösas med back references
+Titta gärna på dem om du har tid över.
+9 Ta reda på hur många gånger en bokstav förekommer dubbelt i strängen
+Exempel: "ss", "oo", "pp"
+Gör detta i ett regex utan att skriva några bokstäver.
 
 10 Ta reda på om det finns några kombinationer av tre bokstäver som förekommer flera gånger i strängen.
 
@@ -33,6 +44,8 @@ I de kommande uppgifterna ska du använda den här strängen: "hands jumbled ter
 
 12 Ta reda på hur många ord det finns i strängen som består av 6 bokstäver.
 
-13 Ta reda på hur många ord det finns i strängen som inte innehåller varken "a" eller "e". Du kan förutsätta att orden är skrivna på engelska.
+13 Ta reda på hur många ord det finns i strängen som inte innehåller varken "a" eller "e"
+Du kan förutsätta att orden är skrivna på engelska.
 
-14 Hitta första bokstaven i ord som kommer efter en punkt och gör om dessa till upper case. (Använd matcher.replaceAll(Function<MatchResult,String>)
+14 Hitta första bokstaven i ord som kommer efter en punkt och gör om dessa till upper case
+(Använd matcher.replaceAll(Function<MatchResult,String>)
