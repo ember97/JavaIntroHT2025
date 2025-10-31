@@ -1,6 +1,13 @@
-Länkar:
+Länkar till dokumentation:
 https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
 https://www.w3schools.com/java/java_regex.asp
+
+Länkar från quiz:
+https://www.geeksforgeeks.org/javascript/username-validation-in-js-regex/
+https://github.com/FluentValidation/FluentValidation/blob/main/src/FluentValidation/Validators/EmailValidator.cs
+https://github.com/FluentValidation/FluentValidation/issues/1895
+https://www.baeldung.com/java-validate-json-string
+
 
 Frågor:
 

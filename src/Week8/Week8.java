@@ -9,6 +9,8 @@ import java.util.regex.Pattern;
 Förklaring:
 På många frågor finns flera lösningar. Dessa är förslag från klassen under övningen. En del fungerar, andra inte.
 Jag har låtit alla vara kvar eftersom det kan vara bra att fundera på varför en del lösningar fungerar och inte andra.
+
+
  */
 
 
